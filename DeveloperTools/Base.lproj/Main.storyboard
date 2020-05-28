@@ -709,9 +709,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-sy-CSi">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-sy-CSi">
                                 <rect key="frame" x="20" y="430" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Gn-Tj-GYJ"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="sG9-Fk-DJq">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -728,10 +730,27 @@
                                     <constraint firstAttribute="width" constant="50" id="btE-4u-7c2"/>
                                 </constraints>
                             </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fR6-uk-roM">
+                                <rect key="frame" x="328" y="430" width="96" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="dNP-UD-owp"/>
+                                    <constraint firstAttribute="height" constant="50" id="jbK-nv-UiO"/>
+                                </constraints>
+                                <textFieldCell key="cell" refusesFirstResponder="YES" title="颜色值, 以0x、0X、或#开头， 不带Alpha值" id="2Qy-um-qnm">
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="fM7-sy-CSi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="AxT-sb-k0E"/>
                             <constraint firstItem="nLH-y1-ac0" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="BL9-fe-wtq"/>
+                            <constraint firstItem="fM7-sy-CSi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="EgB-aX-RtI"/>
+                            <constraint firstItem="nLH-y1-ac0" firstAttribute="leading" secondItem="fR6-uk-roM" secondAttribute="trailing" constant="8" id="ch2-a6-9np"/>
                             <constraint firstAttribute="trailing" secondItem="nLH-y1-ac0" secondAttribute="trailing" constant="20" id="fLc-iA-1fg"/>
+                            <constraint firstItem="fR6-uk-roM" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="mWW-R6-iba"/>
+                            <constraint firstItem="fR6-uk-roM" firstAttribute="leading" secondItem="fM7-sy-CSi" secondAttribute="trailing" constant="10" id="xWb-Wf-b8K"/>
                         </constraints>
                     </view>
                     <connections>

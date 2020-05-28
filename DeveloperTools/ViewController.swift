@@ -16,6 +16,19 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+    }
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        colorShowView.layer?.cornerRadius = 8
+        colorShowView.layer?.masksToBounds = true
+        colorShowView.layer?.backgroundColor = NSColor.black.cgColor
     }
 
     override var representedObject: Any? {
