@@ -17,7 +17,7 @@ public class DTColors {
         return NSColor(displayP3Red: red, green: green, blue: blue, alpha: 1.0)
     }
     
-    class public func color(with value: String) -> NSColor {
+    class public func color(with value: String) -> (NSColor, Int32, Int32, Int32) {
         var colorValue: Int32 = 0
         var strValue = value
         if value.starts(with: "0x") || value.starts(with: "0X") {
@@ -43,6 +43,6 @@ public class DTColors {
             colorValue = (Int32(r) << 16) | (Int32(g) << 8) | Int32(b)
         }
         
-        return color(with: colorValue)
+        return (color(with: colorValue), Int32(r), Int32(g), Int32(b))
     }
 }
